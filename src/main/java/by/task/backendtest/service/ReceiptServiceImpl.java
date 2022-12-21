@@ -5,9 +5,11 @@ import by.task.backendtest.store.receipt.Receipt;
 import by.task.backendtest.store.receipt.ReceiptBuilder;
 import by.task.backendtest.store.receipt.ReceiptDirector;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
+@Component
 public class ReceiptServiceImpl implements ReceiptService {
     ReceiptDirector receiptDirector;
 
