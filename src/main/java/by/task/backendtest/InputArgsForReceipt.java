@@ -1,13 +1,12 @@
 package by.task.backendtest;
 
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @Component
-@Scope("prototype")
 public class InputArgsForReceipt {
     int discountCardId = -1;
     Map<Integer, Integer> productAmountMap = new HashMap<>();

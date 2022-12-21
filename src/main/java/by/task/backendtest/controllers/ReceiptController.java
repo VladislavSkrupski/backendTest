@@ -44,7 +44,7 @@ public class ReceiptController {
         return receiptService.getReceipt(inputArgsForReceipt);
     }
 
-    private InputArgsForReceipt getInputArgsForReceipt(List<Integer> ids, List<Integer> quantities, int card) {
+    public static InputArgsForReceipt getInputArgsForReceipt(List<Integer> ids, List<Integer> quantities, int card) {
         InputArgsForReceipt inputArgsForReceipt = new InputArgsForReceipt();
         Map<Integer, Integer> productQuantitiesMap = new HashMap<>();
         if (card > 0) inputArgsForReceipt.setDiscountCardId(card);
