@@ -2,6 +2,7 @@ package by.task.backendtest.DAO;
 
 import by.task.backendtest.store.discountCard.DiscountCard;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -18,7 +19,7 @@ public class DiscountCardRepositoryImpl implements DiscountCardRepository {
     }
 
     @Override
-    public List<DiscountCard> findAll() {
+    public List<DiscountCard> findAll() throws DataAccessException {
         String query = "SELECT * FROM discount_card";
         return jdbcTemplate.query(query, new DiscountCardRowMapper());
     }
@@ -26,6 +27,13 @@ public class DiscountCardRepositoryImpl implements DiscountCardRepository {
     @Override
     public DiscountCard findById(int id) {
         String query = "SELECT * FROM discount_card WHERE id=" + id;
-        return jdbcTemplate.queryForObject(query, new DiscountCardRowMapper());
+        DiscountCard discountCard;
+        try {
+            discountCard = jdbcTemplate.queryForObject(query, new DiscountCardRowMapper());
+        } catch (DataAccessException e) {
+            System.out.println("ERROR: there is no discount card with id=" + id);
+            discountCard = null;
+        }
+        return discountCard;
     }
 }

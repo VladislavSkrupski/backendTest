@@ -1,10 +1,10 @@
 INSERT INTO product VALUES (DEFAULT, 'Цемент, 20 кг', 20.00, 'PIECE', false);
 INSERT INTO product VALUES (DEFAULT, 'Шуруповёрт', 300.00, 'PIECE', true);
-INSERT INTO product VALUES (DEFAULT, 'Шуруп 4х30', 0.04, 'BULK', true);
+INSERT INTO product VALUES (DEFAULT, 'Шуруп 4х30', 10.43, 'BULK', true);
 INSERT INTO product VALUES (DEFAULT, 'Масло', 31.20, 'LIQUID', false);
 INSERT INTO product VALUES (DEFAULT, 'Клей, 5мл', 5.43, 'PIECE', true);
 INSERT INTO product VALUES (DEFAULT, 'Краска', 25.00, 'LIQUID', true);
-INSERT INTO product VALUES (DEFAULT, 'Песок', 1.00, 'BULK', true);
+INSERT INTO product VALUES (DEFAULT, 'Песок', 4.00, 'BULK', true);
 INSERT INTO product VALUES (DEFAULT, 'Пила', 151.90, 'PIECE', false);
 INSERT INTO product VALUES (DEFAULT, 'Гайка М36', 3.00, 'PIECE', false);
 INSERT INTO product VALUES (DEFAULT, 'Гвозди 4х100мм', 30.00, 'BULK', false);

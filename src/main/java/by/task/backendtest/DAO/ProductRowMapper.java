@@ -14,10 +14,10 @@ public class ProductRowMapper implements RowMapper<Product> {
     @Override
     public Product mapRow(ResultSet rs, int rowNum) throws SQLException, IllegalStateException {
         int id = rs.getInt("id");
-        String name = rs.getString("name");
+        String name = rs.getString("product_name");
         double price = rs.getDouble("price");
         boolean isPromotional = rs.getBoolean("is_promotional");
-        Units unit = Units.valueOf(rs.getString("unit"));
+        Units unit = Units.valueOf(rs.getString("product_unit"));
 
         switch (unit) {
             case BULK -> {
